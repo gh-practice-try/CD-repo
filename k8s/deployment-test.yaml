@@ -12,8 +12,11 @@ spec:
       labels:
         app: test-was01
     spec:
+      imagePullSecrets:
+        - name: acr-secret
       containers:
         - name: test-was01 
           image: testconregyhg.azurecr.io/chicken:32642a37410084f4774a473e0861c8b3ca095774
           ports:
             - containerPort: 8090 #8090
+
