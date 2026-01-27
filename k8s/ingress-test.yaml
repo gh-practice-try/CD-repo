@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-test-was01-ingress
+spec:
+  ingressClassName: nginx #추가
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: k8s-test-was01-svc
+                port:
+                  number: 80
