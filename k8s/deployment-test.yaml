@@ -16,7 +16,7 @@ spec:
         - name: acr-secret
       containers:
         - name: test-was01 
-          image: testconregyhg.azurecr.io/chicken:32642a37410084f4774a473e0861c8b3ca095774
+          image: testconregyhg.azurecr.io/chicken:7bbe25443e72ea5e784230bd5c4dfe784d728d50
           ports:
             - containerPort: 8090 #8090
 
